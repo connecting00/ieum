@@ -249,6 +249,16 @@
     padding-left: 20px !important;
   }
 }
+	  
+	   @media (max-width: 768px) {
+    .video-box {
+      width: calc(100% - 20px) !important; /* 전체 너비에서 좌우 여백 합계만큼 빼기 */
+      margin: 0 10px !important;         /* 좌우 여백 추가 */
+      height: auto !important;          /* 높이는 비율 유지하도록 auto로 */
+      aspect-ratio: 16 / 9;             /* 유튜브 비율 유지 */
+      display: block;
+    }
+  }
   </style>
 </head>
 <body>
