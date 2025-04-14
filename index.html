@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이음교회</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0 auto;
+      background: #fff;
+      color: #222;
+      max-width: 1440px;
+    }
+
+    .top-banner {
+      background-color: #5390d9;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    header {
+      background: #0c3c4c;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .hero {
+      position: relative;
+      background: url('palm-jesus.jpg') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 60px;
+      color: white;
+    }
+
+    .hero .text-box {
+      max-width: 500px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .video-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .video-box {
+      width: 400px;
+      height: 225px;
+      background: #ccc;
+    }
+
+    .video-text {
+      max-width: 400px;
+    }
+
+    .video-text h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .video-text p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .video-text button {
+      background: #0c3c4c;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .info-section {
+      background: #fbe9db;
+      padding: 40px 180px;
+    }
+
+    .info-section h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .info-section ul {
+      padding-left: 20px;
+    }
+
+    .info-section li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .church-info-section {
+      background: #fff;
+      padding: 0 180px 80px;
+    }
+
+    .church-info-section h3 {
+      font-size: 20px;
+      margin: 40px 0 30px;
+      text-align: left;
+    }
+
+    .church-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    .church-info .box {
+      flex: 1;
+      min-width: 180px;
+      max-width: 200px;
+      background: #0c3c4c;
+      color: white;
+      padding: 15px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    .gallery-section {
+      background: #fbe9db;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gallery-section .gallery-box {
+      width: 320px;
+      height: 180px;
+      background: #2e2e2e;
+      margin: 0 auto 20px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #0c3c4c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+      .hero .text-box {
+        padding: 20px;
+      }
+      .video-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-section,
+      .church-info-section {
+        padding: 20px;
+      }
+      .church-info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .church-info .box {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+	  
+@media (max-width: 768px) {
+  .hero {
+    height: 500px !important;
+    position: relative !important;
+    display: block;
+    text-align: center;
+  }
+  .hero img {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .hero .text-box {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+    color: white;
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+  }
+  .hero .text-box h2 {
+    font-size: 24px;
+  }
+  .hero .text-box p {
+    font-size: 14px;
+  }
+  .gallery-section h3 {
+    text-align: left !important;
+    padding-left: 20px !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="top-banner">하나님과 사람, 사람과 사람을 잇다.</div>
+	
+ <header style="background: #0c3c4c; text-align: center; padding: 30px 0;">
+  <img src="images/church_logo.png" alt="이음교회 로고" style="height: 60px;">
+</header>
+
+<div class="hero" style="position: relative; width: 100%; height: 500px; overflow: hidden;">
+  <img src="images/church1.jpg" alt="종려주일 메인 이미지" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+  <div class="text-box" style="position: absolute; top: 50%; right: 60px; transform: translateY(-50%); max-width: 500px; background: rgba(0, 0, 0, 0.4); padding: 30px; border-radius: 8px; color: white;">
+    <h2 style="font-size: 28px; margin-bottom: 20px;">종려주일</h2>
+    <p style="font-size: 15px; line-height: 1.8;">
+      이음 공동체는 삶의 시련을 닮으며 한 몸이 아니라 한 인생이 한 교회로 드려지는 공동체입니다.<br><br>
+      우리는 1&#41; 서로 환대해주는 공동체 2&#41; 관계의 경계를 허물며 공동체됨을 이루는 공동체 3&#41; 이 땅에 하나님 나라를 실현하는 공동체가 되고자 합니다.<br>
+      예배는 미래를 견디는 힘이요, 지탱입니다. 예배를 통해 하나님을 닮아가며 이 땅에서 하나님 나라를 경험하며 살아갑니다.
+    </p>
+  </div>
+</div>
+
+
+
+  <section class="video-section">
+    <a href="https://youtube.com/live/ypDReSVaBSQ?feature=share" target="_blank">
+      <img class="video-box" src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="주일 예배 영상 썸네일">
+    </a>
+    <div class="video-text">
+      <h3>주일 예배 영상</h3>
+      <p>유튜브 링크를 통해 예배에 참여하실 수 있습니다.</p>
+      <a href="https://youtube.com/live/ypDReSVaBSQ?feature=share" target="_blank">
+        <button>view</button>
+      </a>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h3>이음소식</h3>
+    <ul>
+      <li>1. 주일 예배 함께 해 주셔서 감사합니다.<br> 오늘은 종려주일로 드렸습니다.</li>
+      <li>2. 내일부터는 고난주간입니다.<br> 예수님의 그 길에 함께 걷기를 바랍니다.</li>
+      <li>3. 각 성도님들은 가정별로 이번 고난주간을 위해 기도 부탁드립니다.</li>
+      <li>4. 장년/청년 성서학당(로마서) 봄 학기 개강이 준비되어 있습니다.<br> 2025년 5월 중 추석기간에 진행 예정입니다. (성덕 352-965-7396-33)</li>
+      <li>5. 2025년 4월 일정(아카데미 포함 일정 포함)</li>
+    </ul>
+  </section>
+
+  <section class="church-info-section">
+    <h3>교회정보</h3>
+    <div class="church-info">
+      <div class="box">
+        <strong>주일 예배</strong><br>
+        오전 11시<br>
+        오후 예배 오후 1시
+      </div>
+      <div class="box">
+        <strong>구역 예배</strong><br>
+        (지역별 셀모임)<br>
+        - 강릉1, 강릉2<br>
+        - 손산각구역
+      </div>
+      <div class="box">
+        <strong>연락처 및 이메일</strong><br>
+        010-4742-1919<br>
+        ohinyong@hanmail.net
+      </div>
+      <div class="box">
+        <strong>후원</strong><br>
+        농협 301-1199-8889-01<br>
+        (헌금계좌-온라인예배용)<br>
+        농협 356-1119-9571-13<br>
+        (모임운영)
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+  <h3 style="text-align: left; padding-left: 180px; font-size: 20px; margin-bottom: 30px;">갤러리</h3>
+  <div class="swiper-container" style="overflow: hidden; position: relative; max-width: 1000px; margin: 0 auto;">
+    <div class="swiper-wrapper" style="display: flex; transition: transform 0.3s ease;">
+      <img src="images/pic1.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic2.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic3.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic4.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic5.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic6.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic7.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic8.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic9.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; margin-right: 10px; border-radius: 5px;">
+      <img src="images/pic10.jpeg" class="swiper-slide" style="flex: 0 0 auto; width: 300px; height: 180px; border-radius: 5px;">
+    </div>
+    <button onclick="scrollGallery(-1)" style="position: absolute; top: 40%; left: 0; background: #0c3c4c; color: white; border: none; padding: 10px; cursor: pointer;">◀</button>
+    <button onclick="scrollGallery(1)" style="position: absolute; top: 40%; right: 0; background: #0c3c4c; color: white; border: none; padding: 10px; cursor: pointer;">▶</button>
+  </div>
+  <script>
+    let scrollX = 0;
+    function scrollGallery(direction) {
+      const container = document.querySelector('.swiper-container .swiper-wrapper');
+      const amount = 310; // 이미지 width + margin
+      scrollX += direction * amount;
+      scrollX = Math.max(Math.min(scrollX, container.scrollWidth - container.clientWidth), 0);
+      container.style.transform = `translateX(-${scrollX}px)`;
+    }
+  
+    setInterval(() => scrollGallery(1), 3000);
+  </script>
+</section>
+
+  <footer>
+    &copy;2025 이음교회. 모든 권리 보유 | ohinyong@hanmail.net
+  </footer>
+</body>
+</html>
